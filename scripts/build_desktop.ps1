@@ -25,6 +25,7 @@ Remove-Item "$RootDir/SimpleSolitaire.spec" -Force -ErrorAction SilentlyContinue
   --distpath "$RootDir/dist" `
   --workpath "$RootDir/build" `
   --paths "$RootDir" `
+  --add-data "$RootDir/assets;assets" `
   "$RootDir/main.py"
 if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 

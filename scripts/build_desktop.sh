@@ -22,6 +22,7 @@ rm -rf "$ROOT_DIR/build" "$ROOT_DIR/dist" "$ROOT_DIR/SimpleSolitaire.spec"
   --distpath "$ROOT_DIR/dist" \
   --workpath "$ROOT_DIR/build" \
   --paths "$ROOT_DIR" \
+  --add-data "$ROOT_DIR/assets:assets" \
   "$ROOT_DIR/main.py"
 
 printf "\nBuild complete.\n"
