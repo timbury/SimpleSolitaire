@@ -1,0 +1,53 @@
+Simple Solitaire mobile porting checklist
+
+Project assumptions
+- Entry point is main.py (already true).
+- Core game logic stays in solitaire/engine.py (reuse as-is).
+- UI adjustments happen in solitaire/app.py.
+
+Android (Buildozer + python-for-android)
+1) Install prerequisites
+   - Install Java, SDK/NDK build dependencies, and Buildozer.
+2) Review/update buildozer.spec
+   - Confirm package.name/package.domain/version.
+   - Confirm requirements = python3,kivy.
+   - Confirm source include/exclude rules include assets/.
+3) Debug build and deploy
+   - buildozer android debug deploy run
+4) Debug logs
+   - buildozer android logcat
+5) Release artifact
+   - buildozer android release
+   - If targeting Play, use AAB and release signing.
+6) Device test matrix
+   - At least one small phone and one large phone/tablet.
+   - Verify touch hit-boxes, orientation, and performance.
+
+iOS (kivy-ios + Xcode)
+1) Install prerequisites
+   - Xcode + command line tools: xcode-select --install
+   - brew install autoconf automake libtool pkg-config
+   - brew link libtool
+   - pip install kivy-ios
+2) Build recipes
+   - toolchain build python3 kivy
+3) Create Xcode project
+   - toolchain create SimpleSolitaire /absolute/path/to/simple-solitaire
+   - open simplesolitaire-ios/simplesolitaire.xcodeproj
+4) Xcode configuration
+   - Set signing team and bundle identifier.
+   - Set deployment target.
+   - Set orientation policy (landscape recommended for Solitaire layout).
+   - Add app icons and launch screen assets.
+5) Test
+   - Run on simulator and real device.
+   - Validate lifecycle (background/foreground restore).
+6) Distribute
+   - Archive in Xcode and upload to TestFlight.
+   - Resolve App Store metadata and review issues.
+
+App-level readiness checks (both platforms)
+- Ensure all required artwork exists in assets/cards/fronts, assets/cards/backs, assets/ui.
+- Confirm fallback behavior when optional images are missing.
+- Add save/resume of game state for interruption resilience.
+- Verify no runtime code download behavior; app remains self-contained.
