@@ -19,7 +19,7 @@ RANK_FILE_CODES = {1: "A", 11: "J", 12: "Q", 13: "K"}
 
 
 class SolitaireApp(App):
-    title = "Simple Solitaire"
+    title = "FOSSolitaire"
 
     def build(self) -> BoxLayout:
         self.game = KlondikeGame()
@@ -50,7 +50,7 @@ class SolitaireApp(App):
         root.bind(pos=self._update_table_background, size=self._update_table_background)
 
         heading = Label(
-            text="Simple Solitaire (Klondike, Draw 1)",
+            text="FOSSolitaire (Klondike, Draw 1)",
             size_hint_y=None,
             height=dp(30),
             bold=True,

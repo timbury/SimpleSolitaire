@@ -11,13 +11,13 @@ if [ ! -x "$PYTHON_BIN" ]; then
 fi
 
 "$PYTHON_BIN" -m pip install -r "$ROOT_DIR/requirements-build.txt"
-rm -rf "$ROOT_DIR/build" "$ROOT_DIR/dist" "$ROOT_DIR/SimpleSolitaire.spec"
+rm -rf "$ROOT_DIR/build" "$ROOT_DIR/dist" "$ROOT_DIR/FOSSolitaire.spec"
 
 "$PYTHON_BIN" -m PyInstaller \
   --noconfirm \
   --clean \
   --windowed \
-  --name "SimpleSolitaire" \
+  --name "FOSSolitaire" \
   --specpath "$ROOT_DIR" \
   --distpath "$ROOT_DIR/dist" \
   --workpath "$ROOT_DIR/build" \
@@ -26,5 +26,5 @@ rm -rf "$ROOT_DIR/build" "$ROOT_DIR/dist" "$ROOT_DIR/SimpleSolitaire.spec"
   "$ROOT_DIR/main.py"
 
 printf "\nBuild complete.\n"
-printf "macOS app bundle: %s\n" "$ROOT_DIR/dist/SimpleSolitaire.app"
-printf "Binary folder: %s\n" "$ROOT_DIR/dist/SimpleSolitaire"
+printf "macOS app bundle: %s\n" "$ROOT_DIR/dist/FOSSolitaire.app"
+printf "Binary folder: %s\n" "$ROOT_DIR/dist/FOSSolitaire"

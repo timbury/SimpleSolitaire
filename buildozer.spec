@@ -1,6 +1,6 @@
 [app]
-title = Simple Solitaire
-package.name = simplesolitaire
+title = FOSSolitaire
+package.name = fossolitaire
 package.domain = com.timbury
 source.dir = .
 source.include_exts = py,png,jpg,jpeg,kv,atlas,txt,md

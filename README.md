@@ -1,4 +1,4 @@
-# Simple Solitaire (Python + Kivy)
+# FOSSolitaire (Python + Kivy)
 A simple, no-ads, no-in-app-purchases Klondike Solitaire game.
 
 ## Requirements
@@ -56,8 +56,8 @@ powershell -ExecutionPolicy Bypass -File .\scripts\build_desktop.ps1
 The build scripts bundle the `assets/` directory into the packaged app.
 
 ## 6) Run packaged app
-- macOS: `dist/SimpleSolitaire.app` (or binary at `dist/SimpleSolitaire.app/Contents/MacOS/SimpleSolitaire`)
-- Linux/Windows: executable inside `dist/SimpleSolitaire/`
+- macOS: `dist/FOSSolitaire.app` (or binary at `dist/FOSSolitaire.app/Contents/MacOS/FOSSolitaire`)
+- Linux/Windows: executable inside `dist/FOSSolitaire/`
 
 ## Controls
 - **Stock**: draw next card (or recycle waste when stock is empty)

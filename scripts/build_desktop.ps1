@@ -14,13 +14,13 @@ if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 
 Remove-Item "$RootDir/build" -Recurse -Force -ErrorAction SilentlyContinue
 Remove-Item "$RootDir/dist" -Recurse -Force -ErrorAction SilentlyContinue
-Remove-Item "$RootDir/SimpleSolitaire.spec" -Force -ErrorAction SilentlyContinue
+Remove-Item "$RootDir/FOSSolitaire.spec" -Force -ErrorAction SilentlyContinue
 
 & $ResolvedPython.Path -m PyInstaller `
   --noconfirm `
   --clean `
   --windowed `
-  --name "SimpleSolitaire" `
+  --name "FOSSolitaire" `
   --specpath "$RootDir" `
   --distpath "$RootDir/dist" `
   --workpath "$RootDir/build" `
@@ -31,4 +31,4 @@ if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 
 Write-Host ""
 Write-Host "Build complete."
-Write-Host "Windows app folder: $RootDir/dist/SimpleSolitaire"
+Write-Host "Windows app folder: $RootDir/dist/FOSSolitaire"

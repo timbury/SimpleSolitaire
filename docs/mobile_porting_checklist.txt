@@ -1,4 +1,4 @@
-Simple Solitaire mobile porting checklist
+FOSSolitaire mobile porting checklist
 
 Project assumptions
 - Entry point is main.py (already true).
@@ -32,8 +32,8 @@ iOS (kivy-ios + Xcode)
 2) Build recipes
    - toolchain build python3 kivy
 3) Create Xcode project
-   - toolchain create SimpleSolitaire /absolute/path/to/simple-solitaire
-   - open simplesolitaire-ios/simplesolitaire.xcodeproj
+   - toolchain create FOSSolitaire /absolute/path/to/simple-solitaire
+   - open fossolitaire-ios/fossolitaire.xcodeproj
 4) Xcode configuration
    - Set signing team and bundle identifier.
    - Set deployment target.
